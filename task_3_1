@@ -1,0 +1,13 @@
+numbers = {'one': 'один', 'two': 'два', 'three': 'три', 'four': 'четыри', 'five': 'пять',
+                 'six': 'шесть', 'seven': 'семь', 'eight': 'восемь', 'nine': 'девять', 'ten': 'десять'}
+
+
+def num_translate():
+    key = input('Введите число на английском языке: ')
+    if key in numbers:
+        print(numbers[key])
+    else:
+        numbers[key] = None
+        print(numbers[key])
+
+num_translate()

@@ -1,0 +1,15 @@
+names = {}
+
+
+def thesaurus(*args):
+    for name in args:
+        if name[0] not in names:
+            names[name[0]] = [name]
+        else:
+            names[name[0]].append(name)
+    sorted_names = dict(sorted(names.items()))
+    print(names)
+    print(sorted_names)
+
+
+thesaurus('Юлия', 'Иван', 'Мария', 'Петр', 'Илья', 'Алексей')

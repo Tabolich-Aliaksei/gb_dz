@@ -1,0 +1,19 @@
+import random
+
+nouns = ['автомобиль', 'лес', 'огонь', 'город', 'дом']
+adverbs = ['сегодня', 'вчера', 'завтра', 'позавчера', 'ночью']
+adjectives = ['веселый', 'яркий', 'зеленый', 'утопичный', 'мягкий']
+
+
+def get_jokes(n):
+
+
+    jokes = 0
+    list_jokes = []
+    while jokes < n:
+        list_jokes.append(f'{random.choice(nouns)} {random.choice(adverbs)} {random.choice(adjectives)}')
+        jokes += 1
+    print(list_jokes)
+
+
+get_jokes(3)

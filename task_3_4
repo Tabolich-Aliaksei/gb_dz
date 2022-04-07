@@ -1,0 +1,19 @@
+names = {}
+
+
+def thesaurus_adv(*args):
+    for name in args:
+        if name.split()[-1][0] not in names:
+            names[name.split()[-1][0]] = {name.split()[0][0]: [name]}
+        else:
+            for element in names.values():
+                if name[0] not in element:
+                    names[name.split()[-1][0]][name[0]] = [name]
+                else:
+                    element[name[0]].append(name)
+    sorted_names = dict(sorted(names.items()))
+    print(names)
+    print(sorted_names)
+
+
+thesaurus_adv('Иван Сергеев', 'Инна Серова', 'Петр Алексеев', 'Илья Иванов', 'Анна Савельева')
