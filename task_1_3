@@ -1,0 +1,8 @@
+numbers = list(range(1, 101))
+for i in numbers:
+    if i % 10 == 1 and i != 11:
+        print(i, 'процент')
+    elif 5 > i % 10 > 1 and i != 12 and i != 13 and i != 14:
+        print(i, 'процента')
+    else:
+        print(i, 'процентов')
