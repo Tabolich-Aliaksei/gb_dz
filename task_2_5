@@ -1,0 +1,20 @@
+price = [23.45, 12.56, 89, 23.4, 12.12, 98.55, 34.41, 30, 56.44, 33.3]
+
+new_price = []
+my_price = []
+for product in price:
+    product = str(product)
+    new_price.append(product)
+    name = product.split('.')
+    f = f'{name[0]} руб {name[-1]:02} коп'
+    my_price.append(f)
+print(my_price)
+
+print(id(my_price))
+my_price.sort()
+print(my_price)
+print(id(my_price))
+
+price = my_price[::-1]
+print(price)
+print(price[:5])
