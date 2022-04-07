@@ -1,0 +1,25 @@
+numbers = []
+for number in range(1, 1001, 2):
+    numbers.append(number ** 3)
+print(numbers)
+summa = 0
+for number in numbers:
+    check_sum = 0
+    for check_num in str(number):
+        check_sum += int(check_num)
+    if check_sum % 7 == 0:
+        summa += number
+print(summa)
+
+numbers = []
+for number in range(1, 1001, 2):
+    numbers.append(number ** 3 + 17)
+print(numbers)
+summa = 0
+for number in numbers:
+    check_sum = 0
+    for check_num in str(number):
+        check_sum += int(check_num)
+    if check_sum % 7 == 0:
+        summa += number
+print(summa)
