@@ -1,0 +1,21 @@
+tutors = ['Иван', 'Анастасия', 'Петр', 'Сергей', 'Дмитрий', 'Борис', 'Елена', 'Станислав']
+klasses = ['9А', '7В', '9Б', '9В', '8Б', '10А', '10Б', '10Г']
+
+
+def generator():
+    for num in range(0, len(tutors)):
+        yield (tutors[num], klasses[num])
+
+
+generator = generator()
+
+print(type(generator))
+
+print(next(generator))
+print(next(generator))
+print(next(generator))
+print(next(generator))
+print(next(generator))
+print(next(generator))
+print(next(generator))
+print(next(generator))
