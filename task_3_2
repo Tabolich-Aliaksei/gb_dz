@@ -1,0 +1,16 @@
+numbers = {'one': 'один', 'two': 'два', 'three': 'три', 'four': 'четыри', 'five': 'пять',
+                 'six': 'шесть', 'seven': 'семь', 'eight': 'восемь', 'nine': 'девять', 'ten': 'десять'}
+
+
+def num_translate(key):
+    if key in numbers:
+        print(numbers[key])
+    elif key.lower() in numbers:
+        print(numbers[key.lower()].capitalize())
+    else:
+        numbers[key] = None
+        print(numbers[key])
+
+num_translate('one')
+num_translate('One')
+num_translate('xxx')
